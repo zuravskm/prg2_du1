@@ -1,1 +1,3 @@
-# prg2_du1
+# Domácí úkol 1 - Prohlížeč měst a obcí
+
+## Základní funkce programu...
