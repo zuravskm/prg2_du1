@@ -8,8 +8,8 @@ import typing
 import sys
 import json
 
-VIEW_URL = "du1_view.qml"
-CITY_LIST_FILE = ".json" # doplnit
+VIEW_URL = "zaklad.qml"
+CITY_LIST_FILE = "cities.geojson" # doplnit
 
 class BrowserCityModel(QAbstractListModel):
         
