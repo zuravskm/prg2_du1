@@ -65,6 +65,7 @@ class BrowserCityModel(QAbstractListModel):
         LOCATION = QtCore.Qt.UserRole+0
         AREA = QtCore.Qt.UserRole+1
         POPULATION = QtCore.Qt.UserRole+2
+        MESTO = QtCore.Qt.UserRole+3
     
     def __init__(self,filename=None):
         """Initialize and load list from given file"""
