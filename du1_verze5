@@ -100,7 +100,9 @@ class BrowserCityModel(QAbstractListModel):
         if role == self.Roles.POPULATION.value:
             return self.browser_city['features'][index.row()]['properties']['POCET_OBYV']
         if role == self.Roles.AREA.value:
-            return self.browser_city['features'][index.row()]['properties']['SHAPE_Area']
+            f = self.browser_city['features'][index.row()]['properties']['SHAPE_Area']
+            f_round = round(f)
+            return f_round
         if role == self.Roles.LOCATION.value:
             return self.browser_city['features'][index.row()]['geometry']['coordinates']
         if role == self.Roles.MESTO.value:
