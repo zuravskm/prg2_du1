@@ -1,1 +1,1 @@
-# Vývojářská dokumentace
+# Vývojová dokumentace
