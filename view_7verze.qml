@@ -245,7 +245,7 @@ RowLayout {
             zoomLevel: 12
 
             Connections {
-                target: browserCity
+                target: browserCityModel
                 onCurrentItemChanged: mapa.zoomLevel = 12 }
 
             MapItemView {
