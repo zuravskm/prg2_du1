@@ -1,3 +1,5 @@
-# Domácí úkol 1 - Prohlížeč měst a obcí
+# Prohlížeč měst a obcí
+## Uživatelská dokumentace
 
 ## Základní funkce programu...
+
