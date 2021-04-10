@@ -1,5 +1,4 @@
-# Prohlížeč měst a obcí
-## Uživatelská dokumentace
+# Prohlížeč měst a obcí (uživatelská dokumentace)
 
 ## Základní funkce programu...
 
