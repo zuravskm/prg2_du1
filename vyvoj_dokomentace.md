@@ -17,7 +17,7 @@ Nakonec je zde referenční atribut, kterým je třída propojen s třídou Filt
 Třída Filter() uchovává nastavení veškerých filtrů definovaných uživatelem ve svých atributech. Jedná se o město/vesnici - true/false, max a min populaci, vybraný kraj a okres. Je zde jediná výkonná metoda filterCities(self, city), která zajišťuje samotné filtrování a vrací feature geojsonu pouze v případě, že tato feature "projde" přes všechny filtry. 
 
 ### Funkce choose_district(index)
-V této funkci je definováno administrativní rozdělení dle okresů a jsou definovány možnosti pro flitrování podle jednotlivých územních jednotek, nebo dohromady. Okresy jsou uchovávány ve slovníku, jehož klíči jsou názvy krajů. Toto programátorsky neelegantní řešení bylo zvoleno jelikož v pythonu jsou problémy s propojováním python seznamů a tzv. comboboxů v qml viz. [https://forum.qt.io/topic/116304/example-of-a-model-for-use-with-qtquick-combobox-qml](QT fórum). Možnosti v comboboxu pro výběr okresů jsou updatovány s pomocí nastavení context property ze setteru set_districts(self, new_val).
+V této funkci je definováno administrativní rozdělení dle okresů a jsou definovány možnosti pro flitrování podle jednotlivých územních jednotek, nebo dohromady. Okresy jsou uchovávány ve slovníku, jehož klíči jsou názvy krajů. Toto programátorsky neelegantní řešení bylo zvoleno jelikož v pythonu jsou problémy s propojováním python seznamů a tzv. comboboxů v qml viz. [https://forum.qt.io/topic/116304/example-of-a-model-for-use-with-qtquick-combobox-qml] (QT fórum). Možnosti v comboboxu pro výběr okresů jsou updatovány s pomocí nastavení context property ze setteru set_districts(self, new_val).
 
 
 
