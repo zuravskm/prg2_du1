@@ -6,7 +6,7 @@ Data jsou ve formátu *.geojson a jejich atributy využívané v této aplikaci 
 
 ## 2. Implementované třídy a funkce
 ### BrowserCityModel - dědí od abstraktní třídy QAbstractListModel
-Tento model načítá data ze souboru *.geojson a vytvoří seznam obcí s jejich souřadnicemi. Funkce load_from_json(self, filename) vrací seznam všech obcí ze vstupních dat. Uchovává 2 důležité seznamy – browser_city, který obsahuje data určená k zobrazení (vyfiltrovaná data) a full_city_list, který obsahuje veškerá sídla načtená ze zdrojového geojsonu bez ohledu na aktuální nastavení filtrů. 
+Tento model načítá data ze souboru *.geojson a vytvoří seznam obcí s jejich souřadnicemi. Funkce load_from_json(self, filename) vrací seznam všech obcí ze vstupních dat. Uchovává 2 důležité seznamy – browser_city, který obsahuje data určená k zobrazení (vyfiltrovaná data) a full_city_list, který obsahuje veškerá sídla načtená ze zdrojového geojsonu bez ohledu na aktuální nastavení filtrů. Třída také implementuje povinné metody pro rozhraní abstraktní třídy. 
 
 V rámci této třídy je ještě vytvořena třída Roles, v níž jsou definované 4 role: LOCATION, AREA, POPULATION A MESTO.  Metoda data(self, index:QtCore.QModelIndex, role:int=...) přiřazuje výše uvedeným rolím data z načteného geojson. V této části je také provedeno zaokrouhlení rozlohy na celé kilometry. Další metoda roleNames(self) definuje názvy rolí, které jsou následně využity v *.qml souboru. 
 
@@ -17,7 +17,7 @@ Nakonec je zde referenční atribut, kterým je třída propojen s třídou Filt
 Třída Filter() uchovává nastavení veškerých filtrů definovaných uživatelem ve svých atributech. Jedná se o město/vesnici - true/false, max a min populaci, vybraný kraj a okres. Je zde jediná výkonná metoda filterCities(self, city), která zajišťuje samotné filtrování a vrací feature geojsonu pouze v případě, že tato feature "projde" přes všechny filtry. 
 
 ### Funkce choose_district(index)
-V této funkci je definováno administrativní rozdělení dle okresů a jsou definovány možnosti pro flitrování podle jednotlivých územních jednotek, nebo dohromady. Okresy jsou uchovávány ve slovníku, jehož klíči jsou názvy krajů. Toto programátorsky neelegantní řešení bylo zvoleno jelikož v pythonu jsou problémy s propojováním python seznamů a tzv. comboboxů v qml viz. [I'm an inline-style link](https://www.google.com) (https://forum.qt.io/topic/116304/example-of-a-model-for-use-with-qtquick-combobox-qml "QT fórum"). Možnosti v comboboxu pro výběr okresů jsou updatovány s pomocí nastavení context property ze setteru set_districts(self, new_val).
+V této funkci je definováno administrativní rozdělení dle okresů a jsou definovány možnosti pro flitrování podle jednotlivých územních jednotek, nebo dohromady. Okresy jsou uchovávány ve slovníku, jehož klíči jsou názvy krajů. Toto programátorsky neelegantní řešení bylo zvoleno jelikož v pythonu jsou problémy s propojováním python seznamů a tzv. comboboxů v qml viz. [https://forum.qt.io/topic/116304/example-of-a-model-for-use-with-qtquick-combobox-qml](QT fórum). Možnosti v comboboxu pro výběr okresů jsou updatovány s pomocí nastavení context property ze setteru set_districts(self, new_val).
 
 
 
