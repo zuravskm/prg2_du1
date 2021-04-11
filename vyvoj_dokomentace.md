@@ -39,9 +39,13 @@ Zde je propojení s *property* realizováno metodami *first.value* a *second.val
 ### Textová editovatelná pole
 Pro zadávání minimálního a maximálního počtu obyvatel jsou zde vytvořena dvě editovatelná textová pole, která předávají filtrovací funkci vstupní hodnoty od uživatele do stejných proměnných jako RangeSlider. 
 
+### ComboBox
+První ComboBox obsahuje názvy krajů a druhý předpřipravený seznam okresů. Oba dva předávají vybranou hodnotu metodou *currentIndex* a *currentText* filtrovací funkci.  
 
+### Button
+Při kliknutí na tlačítko *filtrovat* je zavolaná funkce *modifyList()* na *browserCityModel*. ... 
 
-
+### ListView
 
 
 
