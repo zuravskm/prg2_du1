@@ -1,1 +1,0 @@
-# Objektový návrh aplikace
