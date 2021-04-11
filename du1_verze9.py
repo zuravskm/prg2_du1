@@ -8,7 +8,7 @@ import typing
 import sys
 import json
 
-VIEW_URL = "zaklad_7.qml"   # Advanced user interface
+VIEW_URL = "zaklad_9.qml"   # Advanced user interface
 CITY_LIST_FILE = "cities_sort.geojson"
 
 def choose_district(index):
