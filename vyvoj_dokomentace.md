@@ -49,5 +49,4 @@ Při kliknutí na tlačítko *filtrovat* je zavolaná funkce *modifyList()* na *
 ListView zobrazuje seznam filtrovaných měst a obcí a k nim informace o jejich rozloze a počtu obyvatel. Hodnoty jsou předávány pomocí definovaných rolí. Barevné rozlišení měst a obcí zajišťuje hodnota role město, která testována v if podmínce: *(model.mesto == 1) ? colorCity : colorVillage*. Na stejném principu je realizováno i vytvoření tučného písma u měst. Položku v ListView je možné vybrat pomocí MouseArea. Při kliknutí je vybraná položka ještě zvýrazněna modrým obdélníkem v ListView a zároveň znázorněná na mapě. 
 
 ### Mapa
-
-
+Mapa využívá plugin z OpenStreetMap pro zobrazení podkladu a je propojena s listView pomocí Connection. Pokud je ListView změněn, přiblíží nebo oddálí se na hodnotu 12. Dále jsou v mapě zobrazeny názvy obcí a bodový znak, které jsou vizualizovány pomocí MapItemView. 
