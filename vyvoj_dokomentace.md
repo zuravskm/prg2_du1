@@ -23,13 +23,25 @@ V této funkci je definováno administrativní rozdělení dle okresů a jsou de
 ## Popis grafického rozhranní aplikace
 Rozložení aplikace se skládá ze dvou hlavních sloupců. 
 
-V levém sloupci se nachází možnosti pro filtrování - 2x check button pro volbu města a obcí, RangeSlider a dvě textová pole pro volbu minimálního a maximálního počtu obyvatel, 2x ComboBox pro výběr kraje a okresu. Na konci výběru možnotí pro filtrování se nachází tlačítko *filtrovat*, které provádí nastavenou filtraci. Níže se nachází seznam, v němž jsou uvedeny vyfiltrované obce spolu se základními informacemi o nich (rozloha, počet obyvatel) a jsou barevně rozlišeny na města (červeným a tučným písmem) a obce.
+V levém sloupci se nachází možnosti pro filtrování - 2x CheckBox pro volbu města a obcí, RangeSlider a dvě textová pole pro volbu minimálního a maximálního počtu obyvatel, 2x ComboBox pro výběr kraje a okresu. Na konci výběru možnotí pro filtrování se nachází tlačítko *filtrovat*, které provádí nastavenou filtraci. Níže se nachází seznam, v němž jsou uvedeny vyfiltrované obce spolu se základními informacemi o nich (rozloha, počet obyvatel) a jsou barevně rozlišeny na města (červeným a tučným písmem) a obce.
 
 Celý pravý sloupec zabírá mapa, která zobrazuje vyfiltrovaná města a obce (jsou stejně barevně odlišena jako v seznamu vlevo). Obce jsou vizualizovány bodem, jehož barva je také rozlišena pro obce a města. 
 
 Rozměr mapy se automaticky přizpůsobuje velikosti okna.
 
 ## QML
+### CheckBox
+Oba dva CheckBoxy jsou metodou *checkState* propojeny s *property* pro filtrování. V této *property* jsou hodnoty CheckBoxů předány filtrovací funkci.
+
+### RangeSlider
+Zde je propojení s *property* realizováno metodami *first.value* a *second.value*. Opět jsou hodnoty předány filtrovací funkci. 
+
+### Textová editovatelná pole
+Pro zadávání minimálního a maximálního počtu obyvatel jsou zde vytvořena dvě editovatelná textová pole, která předávají filtrovací funkci vstupní hodnoty od uživatele do stejných proměnných jako RangeSlider. 
+
+
+
+
 
 
 
