@@ -16,14 +16,14 @@ Na konci této třídy je volána třída Filter().
 ### 2. Funkce choose_district(index)
 V této funkci je definováno administrativní rozdělení dle okresů a jsou definovány možnosti pro flitrování podle jednotlivých územních jednotek, nebo dohromady. 
 
-### 3. Filetr
+### 3. Filter
 ...
 
 
 ## Popis grafického rozhranní aplikace
 Rozložení aplikace se skládá ze dvou hlavních sloupců. 
 
-V levém sloupci se nachází možnosti pro filtrování - 2x check button pro volbu města a obcí, RangeSlider a dvě textová pole pro volbu minimálního a maximálního počtu obyvatel, 2x ComboBox pro výběr kraje a okresu. Na konci výběru možnotí pro filtrování se nachází tlačítko filtrovat, které provádí nastavenou filtraci. 
+V levém sloupci se nachází možnosti pro filtrování - 2x check button pro volbu města a obcí, RangeSlider a dvě textová pole pro volbu minimálního a maximálního počtu obyvatel, 2x ComboBox pro výběr kraje a okresu. Na konci výběru možnotí pro filtrování se nachází tlačítko *filtrovat*, které provádí nastavenou filtraci. Níže se nachází seznam, v němž jsou uvedeny vyfiltrované obce spolu se základními informacemi o nich (rozloha, počet obyvatel) a jsou barevně rozlišeny na města (červeným a tučným písmem) a obce.
 
 
 
