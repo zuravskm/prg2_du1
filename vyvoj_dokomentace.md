@@ -1,5 +1,5 @@
 # Vývojová dokumentace
-Následující skipt byl vytvořen v prostředí PySide2 a QtQuick. 
+Následující skipt byl vytvořen v prostředí PySide2 a QtQuick. Jako mapový podklad slouží volně dostupné OpenStreetMap, které jsou nahrány do prostředí pythonu pomocí pluginu.
 
 ## Data sídel
 Data jsou ve formátu *.geojson a jejich atributy využívané v této aplikaci jsou: souřadnice, počet obyvatel, rozloha, název obce, název administrativních jednotek a informace, zda se jedná o město.
@@ -46,7 +46,8 @@ První ComboBox obsahuje názvy krajů a druhý předpřipravený seznam okresů
 Při kliknutí na tlačítko *filtrovat* je zavolaná funkce *modifyList()* na *browserCityModel*. ... 
 
 ### ListView
+ListView zobrazuje seznam filtrovaných měst a obcí a k nim informace o jejich rozloze a počtu obyvatel. Hodnoty jsou předávány pomocí definovaných rolí. Barevné rozlišení měst a obcí zajišťuje hodnota role město, která testována v if podmínce: *(model.mesto == 1) ? colorCity : colorVillage*. Na stejném principu je realizováno i vytvoření tučného písma u měst. Položku v ListView je možné vybrat pomocí MouseArea. Při kliknutí je vybraná položka ještě zvýrazněna modrým obdélníkem v ListView a zároveň znázorněná na mapě. 
 
-
+### Mapa
 
 
